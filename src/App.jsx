@@ -1,9 +1,58 @@
-import './App.css'
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-export default function App() {
+import Navbar from "./components/Navbar.jsx";
+import Hero from "./components/Hero.jsx";
+import About from "./components/About.jsx";
+import Projects from "./components/Projects.jsx";
+import Blog from "./components/Blog.jsx";
+import BlogPost from "./components/BlogPost.jsx";
+import RecentBlog from "./components/RecentBlog.jsx";
+import Resume from "./components/Resume.jsx";
+import Contact from "./components/Contact.jsx";
+import Footer from "./components/Footer.jsx";
+
+function App() {
+  const recentPosts = [
+    { title: "Real-Time Fault Detection in 220kV Transmission Lines using Deep Learning", slug: "real-time-fault-detection" },
+    { title: "AI for Healthcare: Insomnia Detection from ECG Signals", slug: "insomnia-detection-ecg" },
+  ];
+
   return (
-    <main>
-      React ⚛️ + Vite ⚡ + Replit
-    </main>
-  )
+    <Router>
+      <Navbar />
+
+      <Routes>
+        {/* Home Page */}
+        <Route
+          path="/"
+          element={
+            <>
+              <Hero />
+              <About />
+              <Projects />
+              <RecentBlog recentPosts={recentPosts} />
+
+              {/* Blog Section (scroll target) */}
+              <div id="blog-section">
+                <Blog />
+              </div>
+
+              <Resume />
+              <Contact />
+              <Footer />
+            </>
+          }
+        />
+
+        {/* Blog List Page */}
+        <Route path="/blog" element={<Blog />} />
+
+        {/* Blog Detail Page */}
+        <Route path="/blog/:slug" element={<BlogPost />} />
+      </Routes>
+    </Router>
+  );
 }
+
+export default App;
