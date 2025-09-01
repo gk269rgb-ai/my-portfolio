@@ -23,7 +23,7 @@ function App() {
       <Navbar />
 
       <Routes>
-        {/* Home Page */}
+        {/* ✅ Home Page */}
         <Route
           path="/"
           element={
@@ -33,24 +33,26 @@ function App() {
               <Projects />
               <RecentBlog recentPosts={recentPosts} />
 
-              {/* Blog Section (scroll target) */}
+              {/* Blog section inside Home */}
               <div id="blog-section">
                 <Blog />
               </div>
 
               <Resume />
               <Contact />
-              <Footer />
             </>
           }
         />
 
-        {/* Blog List Page */}
+        {/* ✅ Blog List Page (separate full blog page if needed) */}
         <Route path="/blog" element={<Blog />} />
 
-        {/* Blog Detail Page */}
+        {/* ✅ Blog Detail Page */}
         <Route path="/blog/:slug" element={<BlogPost />} />
       </Routes>
+
+      {/* ✅ Footer is always visible */}
+      <Footer />
     </Router>
   );
 }

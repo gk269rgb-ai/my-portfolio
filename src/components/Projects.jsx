@@ -5,7 +5,7 @@ const projectList = [
     title: "Real-Time Fault Detection in 220kV Transmission Line using Deep Learning",
     description:
       "Developed a deep learning-based fault classification and localization system for high-voltage transmission lines. Implemented data preprocessing and CNN models on MATLAB/Simulink datasets, enabling real-time fault detection and reliable grid monitoring.",
-    link: "/files/GUNJAN_KUMAR_REPORT.pdf", // Replace with report PDF or GitHub repo
+    link: "/files/GUNJAN_KUMAR_REPORT.pdf",
   },
   {
     title: "Insomnia Detection using ECG Signals and Deep Learning",
@@ -17,7 +17,11 @@ const projectList = [
     title: "AI-Powered Content Creation for Mathematics and Physics (Grade 9–12)",
     description:
       "Developed an AI system capable of generating high-quality educational content for high school-level mathematics and physics. Leveraged NLP models and knowledge-based generation techniques to create practice problems, explanations, and quizzes.",
-    link: "/files//files/Insomnia_Detection_using_ECG.pdf" , links: "/files/Trigo part 1.pdf" ,
+    links: [
+      { name: "Basic Trigonometry ", url: "/files/Trigo_Basic.pdf" },
+      { name: " Understanding Motion & NLM", url: "/files/Understanding_Motion_&_NLM.pdf" },
+      { name: "Read Blog", url: "/blog/ai-powered-content" }, // ✅ added blog link
+    ],
   },
   {
     title: "Human Following Robot",
@@ -26,10 +30,16 @@ const projectList = [
     link: "/files/Human_Following_robot.pdf",
   },
   {
+    title: "Digital Image Processing",
+    description:
+      "Implemented various image processing techniques using Python. Covered image compression, intensity transformations (logarithmic, gamma, etc.), geometric transformations (rotation, shifting), histogram analysis and equalization, filtering (low-pass and high-pass), edge detection using gradients, and morphological operations (erosion, dilation, opening, closing, etc.).",
+    link: "/files/DIP_Project.pdf",
+  },
+  {
     title: "Advanced Home Automation using Bluetooth Module",
     description:
       "Created a cost-effective smart home automation system using Bluetooth and microcontrollers. Enabled device control through mobile applications for enhanced convenience and energy efficiency.",
-    link: "#",
+    link: "#", // no report yet
   },
   {
     title: "Image Classification and Transfer Learning in AI",
@@ -43,20 +53,13 @@ const projectList = [
       "Implemented machine learning and deep learning models for sentiment analysis and document classification. Compared performance of traditional ML techniques with transformers-based architectures.",
     link: "#",
   },
-  {
-    title: "Digital Image Processing",
-    description:
-      "Implemented various image processing techniques using Python. Covered image compression, intensity transformations (logarithmic, gamma, etc.), geometric transformations (rotation, shifting), histogram analysis and equalization, filtering (low-pass and high-pass), edge detection using gradients, and morphological operations (erosion, dilation, opening, closing, etc.).",
-    link: "/files/DIP_Project.pdf",
-  },
+ 
   {
     title: "Advanced Automatic Irrigation System Using Weather Prediction and ESP8266 NodeMCU",
     description:
       "Designed and implemented an intelligent irrigation system leveraging ESP8266 NodeMCU, soil moisture sensors, water motor, and weather prediction APIs. Enabled efficient water usage by integrating real-time environmental data with automated control for sustainable agriculture.",
-    link: "/files/Automatic_Irrigation_System.pdf", // Place your PDF in /public/files
+    link: "#",
   },
-
-
 ];
 
 function Projects() {
@@ -68,14 +71,34 @@ function Projects() {
           <div key={index} style={styles.card}>
             <h3>{project.title}</h3>
             <p>{project.description}</p>
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              style={styles.button}
-            >
-              View Report
-            </a>
+
+            {/* Multiple Links */}
+            {project.links ? (
+              project.links.map((file, idx) => (
+                <a
+                  key={idx}
+                  href={file.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ ...styles.button, marginRight: "8px" }}
+                >
+                  {file.name}
+                </a>
+              ))
+            ) : project.link && project.link !== "#" ? (
+              // Single Link
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={styles.button}
+              >
+                View Report
+              </a>
+            ) : (
+              // No Report
+              <span style={styles.disabledButton}>Coming Soon</span>
+            )}
           </div>
         ))}
       </div>
@@ -117,6 +140,16 @@ const styles = {
     textDecoration: "none",
     borderRadius: "6px",
     fontWeight: "bold",
+  },
+  disabledButton: {
+    display: "inline-block",
+    marginTop: "10px",
+    padding: "8px 15px",
+    backgroundColor: "#cccccc",
+    color: "white",
+    borderRadius: "6px",
+    fontWeight: "bold",
+    cursor: "not-allowed",
   },
 };
 
