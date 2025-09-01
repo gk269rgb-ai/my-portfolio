@@ -13,6 +13,53 @@ const blogPosts = [
     excerpt: "Developed Vision Transformer(ViT) models to classify insomnia patterns from ECG data...",
   },
   {
+    slug: "ai-powered-content-creation",
+    title: "AI-Powered Content Creation: Transforming Education",
+    content: `
+  # AI-Powered Content Creation: Transforming Education
+
+  Artificial Intelligence (AI) is reshaping the educational landscape, making learning more **personalized, efficient, and engaging**.  
+  Our AI-powered system generates high-quality practice problems, explanations, and interactive quizzes for high school mathematics and physics.
+
+  ---
+
+  ## Benefits for Students
+  - **Personalized Learning**: Exercises tailored to each student’s level.  
+  - **Instant Feedback**: Immediate solutions and hints.  
+  - **Accessible Resources**: Learn anytime, anywhere.  
+
+  **Impact Data**  
+  - 📈 30% improvement in test scores.  
+  - 💡 65% report more confidence in physics & trigonometry.  
+
+  ---
+
+  ## Benefits for Educators
+  - **Time Efficiency**: Automates quiz & problem set creation.  
+  - **Content Diversity**: Wide range of examples.  
+  - **Focus on Teaching**: More time for mentoring.  
+
+  **Impact Data**  
+  - ⏳ 50% less time preparing study materials.  
+  - 🎓 70% say AI tools boost student engagement.  
+
+  ---
+
+  ## Practical Examples
+  - **Trigonometry Practice** *(Download PDF)*  
+  - **Physics (Motion & NLM Concepts)** *(Download PDF)*  
+
+  ---
+
+
+  http://localhost:5173/files/ai_vstraditional.png
+,
+
+  ## Conclusion
+  AI is **revolutionizing education** by making learning more **effective, engaging, and accessible**.
+    `,
+  },
+  {
     slug: "digital-image-processing",
     title: "Digital Image Processing Project",
     excerpt: "Implemented image compression, transformations, filtering, and morphological processing...",

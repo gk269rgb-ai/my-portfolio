@@ -19,8 +19,8 @@ const projectList = [
       "Developed an AI system capable of generating high-quality educational content for high school-level mathematics and physics. Leveraged NLP models and knowledge-based generation techniques to create practice problems, explanations, and quizzes.",
     links: [
       { name: "Basic Trigonometry ", url: "/files/Trigo_Basic.pdf" },
-      { name: " Understanding Motion & NLM", url: "/files/Understanding_Motion_&_NLM.pdf" },
-      { name: "Read Blog", url: "/blog/ai-powered-content" }, // ✅ added blog link
+      { name: " Understanding Motion & NLM", url: "/files/Understanding_motion_&_NLM.pdf" },
+      { name: "Read Blog", url: "/blog/ai-powered-content-creation" }, // ✅ correct
     ],
   },
   {
@@ -53,7 +53,6 @@ const projectList = [
       "Implemented machine learning and deep learning models for sentiment analysis and document classification. Compared performance of traditional ML techniques with transformers-based architectures.",
     link: "#",
   },
- 
   {
     title: "Advanced Automatic Irrigation System Using Weather Prediction and ESP8266 NodeMCU",
     description:

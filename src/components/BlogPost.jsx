@@ -5,14 +5,12 @@ import ReactMarkdown from "react-markdown";
 function BlogPost() {
   const { slug } = useParams();
 
-  // ✅ All blog posts
+  // ✅ All blog posts with full content
   const posts = [
     {
       slug: "real-time-fault-detection",
       title: "Fault Detection in 220kV Transmission Lines using Deep Learning",
       content: `
-
-
 In the world of power transmission, fault detection and assessment are critical...  
 
 ## Why Deep Learning for Fault Detection?
@@ -38,7 +36,6 @@ For more details, read my full report on fault detection in 220kV transmission l
       slug: "insomnia-detection-ecg",
       title: "AI for Healthcare: Insomnia Detection from ECG Signals",
       content: `
-
 This research aimed at detecting insomnia through ECG signal patterns using deep learning architectures Vision Transformer (ViT).  
 The project highlights how AI can contribute to personalized healthcare diagnostics.  
 
@@ -50,11 +47,57 @@ The project highlights how AI can contribute to personalized healthcare diagnost
       `,
     },
     {
+      slug: "ai-powered-content-creation",
+      title: "AI-Powered Content Creation: Transforming Education",
+      content: `
+
+
+Artificial Intelligence (AI) is reshaping the educational landscape, making learning more **personalized, efficient, and engaging**.  
+
+---
+
+## Benefits for Students
+- **Personalized Learning**: Exercises tailored to each student’s level.  
+- **Instant Feedback**: Immediate solutions and hints.  
+- **Accessible Resources**: Learn anytime, anywhere.  
+
+**Impact Data**  
+- 📈 30% improvement in test scores.  
+- 💡 65% report more confidence in physics & trigonometry.  
+
+---
+
+## Benefits for Educators
+- **Time Efficiency**: Automates quiz & problem set creation.  
+- **Content Diversity**: Wide range of examples.  
+- **Focus on Teaching**: More time for mentoring.  
+
+**Impact Data**  
+- ⏳ 50% less time preparing study materials.  
+- 🎓 70% say AI tools boost student engagement.  
+
+---
+
+## Practical Examples
+- **Trigonometry Practice** *(Download PDF)*  
+- **Physics (Motion & NLM Concepts)** *(Download PDF)*  
+
+---
+
+## AI vs Traditional Learning  
+
+![AI vs Traditional Learning](/files/ai_vs_traditional.png)
+
+---
+
+## Conclusion
+AI is **revolutionizing education** by making learning more **effective, engaging, and accessible**.
+      `,
+    },
+    {
       slug: "digital-image-processing",
       title: "Digital Image Processing",
       content: `
-# 
-
 Implemented various image processing techniques:  
 
 - Image compression  
@@ -75,8 +118,6 @@ Implemented various image processing techniques:
       slug: "human-following-robot",
       title: "Human Following Robot",
       content: `
-#  
-
 Designed and implemented a robot that autonomously follows human movement using:  
 
 - **Computer Vision**  
@@ -99,8 +140,6 @@ Designed and implemented a robot that autonomously follows human movement using:
       slug: "home-automation",
       title: "Advanced Home Automation using Wi-Fi & Bluetooth Module",
       content: `
-
-
 Created a cost-effective smart home automation system using **Bluetooth** and **microcontrollers**.  
 
 - Mobile app control for devices  
@@ -117,8 +156,6 @@ Created a cost-effective smart home automation system using **Bluetooth** and **
       slug: "nlp-text-classification",
       title: "Natural Language Processing for Text Classification",
       content: `
- 
-
 Implemented ML and DL models for **sentiment analysis** and **document classification**.  
 
 - Compared SVM, Random Forest, CNN, and Transformer-based models.  
@@ -160,7 +197,7 @@ Implemented ML and DL models for **sentiment analysis** and **document classific
         <ReactMarkdown>{post.content}</ReactMarkdown>
       </div>
 
-      {/* ✅ Bottom Navigation Buttons */}
+      {/* ✅ Bottom Navigation */}
       <div className="mt-10 flex justify-center gap-6 flex-wrap">
         <Link
           to="/blog"
