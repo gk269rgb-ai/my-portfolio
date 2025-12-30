@@ -14,8 +14,8 @@ function Contact() {
       <div style={styles.container}>
         <h2 style={styles.heading}>Contact Me</h2>
         <p style={styles.text}>
-          Feel free to reach out for collaborations, research discussions, or
-          career opportunities.
+Open to Engineer Trainee, Electrical Engineer, and Site Engineering roles.
+Available for full-time opportunities across India.
         </p>
         <div style={styles.links}>
           <a
