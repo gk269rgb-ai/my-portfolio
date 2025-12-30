@@ -4,7 +4,12 @@ const projectList = [
   {
     title: "Real-Time Fault Detection in 220kV Transmission Line using Deep Learning",
     description:
-      "Developed a deep learning-based fault classification and localization system for high-voltage transmission lines. Implemented data preprocessing and CNN models on MATLAB/Simulink datasets, enabling real-time fault detection and reliable grid monitoring.",
+      "Developed a real-time fault detection and classification system using three-phase voltage and current signals. Simulated electrical faults
+relevant to transmission systems and validated performance using
+MATLAB and Simulink.
+
+Focus areas included fault behavior analysis, system monitoring,
+and maintenance-oriented diagnostics.",
     link: "/files/GUNJAN_KUMAR_REPORT.pdf",
   },
   {
@@ -13,45 +18,30 @@ const projectList = [
       "Built a deep learning pipeline to analyze ECG data and detect insomnia patterns with high classification accuracy. Applied advanced signal processing and CNN/LSTM architectures for feature extraction and classification.",
     link: "/files/Insomnia_Detection_using_ECG.pdf",
   },
-  {
-    title: "AI-Powered Content Creation for Mathematics and Physics (Grade 9–12)",
-    description:
-      "Developed an AI system capable of generating high-quality educational content for high school-level mathematics and physics. Leveraged NLP models and knowledge-based generation techniques to create practice problems, explanations, and quizzes.",
-    links: [
-      { name: "Basic Trigonometry ", url: "/files/Trigo_Basic.pdf" },
-      { name: " Understanding Motion & NLM", url: "/files/Understanding_motion_&_NLM.pdf" },
-      { name: "Read Blog", url: "/blog/ai-powered-content-creation" }, // ✅ correct
-    ],
-  },
+
   {
     title: "Human Following Robot",
     description:
-      "Designed and implemented a robot that autonomously follows human movement using computer vision and Lidar. Applied AI-based path-tracking algorithms for real-time operation in dynamic environments.",
+      "Designed and implemented robot capable of real-time object tracking using
+computer vision and LiDAR. Integrated sensor data for navigation logic,
+demonstrating applications in automation and industrial monitoring.
+",
     link: "/files/Human_Following_robot.pdf",
+  },
+
+  {
+    title: "Advanced Home Automation using Bluetooth Module",
+    description:
+      "Designed and implemented an electrical automation system for appliance
+control using Arduino. Focused on switching logic, safety considerations,
+and basic electrical control principles.",
+    link: "#", // no report yet
   },
   {
     title: "Digital Image Processing",
     description:
       "Implemented various image processing techniques using Python. Covered image compression, intensity transformations (logarithmic, gamma, etc.), geometric transformations (rotation, shifting), histogram analysis and equalization, filtering (low-pass and high-pass), edge detection using gradients, and morphological operations (erosion, dilation, opening, closing, etc.).",
     link: "/files/DIP_Project.pdf",
-  },
-  {
-    title: "Advanced Home Automation using Bluetooth Module",
-    description:
-      "Created a cost-effective smart home automation system using Bluetooth and microcontrollers. Enabled device control through mobile applications for enhanced convenience and energy efficiency.",
-    link: "#", // no report yet
-  },
-  {
-    title: "Image Classification and Transfer Learning in AI",
-    description:
-      "Explored CNN-based image classification tasks with transfer learning using pre-trained models such as ResNet and VGG. Evaluated performance on benchmark datasets to study model generalization and fine-tuning.",
-    link: "#",
-  },
-  {
-    title: "Natural Language Processing for Text Classification",
-    description:
-      "Implemented machine learning and deep learning models for sentiment analysis and document classification. Compared performance of traditional ML techniques with transformers-based architectures.",
-    link: "#",
   },
   {
     title: "Advanced Automatic Irrigation System Using Weather Prediction and ESP8266 NodeMCU",
